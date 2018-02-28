@@ -13,8 +13,13 @@ func vipin(w http.ResponseWriter, r *http.Request){
     fmt.Fprintf(w, "Created by vipin")
 }
 
+func navaneeth(w http.ResponseWriter, r *http.Request){
+    fmt.Fprintf(w, "Created by navaneeth")
+}
+
 func main() {
     http.HandleFunc("/", helloWorld)
     http.HandleFunc("/vipin", vipin)
+    http.HandleFunc("/navaneeth", navaneeth)
     http.ListenAndServe(":80", nil)
 }
